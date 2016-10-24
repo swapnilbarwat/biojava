@@ -40,10 +40,10 @@ steps:
 - build:
     template: biojava-example-base
     parameters:
-      CMD: "sh -c 'cd /src && go build main.go'"
+      CMD: "sh -c 'cd /src'"
       checkout_step: "%%step.checkout.id%%"
   test:
     template: biojava-example-base
     parameters:
-      CMD: "sh -c 'cd /src && go test -v'"
+      CMD: "sh -c 'cd /src'"
       checkout_step: "%%step.checkout.id%%"
